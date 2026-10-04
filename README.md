@@ -105,4 +105,4 @@ The scripts folder contains the script files used to modify each scene's behavio
 ![Level 2](/docs/assets/Screenshot3.png?raw=true "Level 2")
 
 ## ▶️ Video Demonstration
-[![CS50X's Final Project: Duck! The Stuck](https://markdown-videos-api.jorgenkh.no/url?url=https%3A%2F%2Fyoutu.be%2FD25i03dgOXc)](https://youtu.be/RSHnFOVKveM)
+[![CS50X's Final Project: Duck! The Stuck](https://img.youtube.com/vi/RSHnFOVKveM/0.jpg)](https://www.youtube.com/watch?v=RSHnFOVKveM)
