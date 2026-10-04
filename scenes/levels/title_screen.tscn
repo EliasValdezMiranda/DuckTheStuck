@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxy26k16f62cm"]
+
+[ext_resource type="Script" path="res://scripts/global/title_screen.gd" id="1_bxqb0"]
+[ext_resource type="Texture2D" uid="uid://dg6yx13bs54q3" path="res://assets/sprites/title_screen.png" id="1_pffxj"]
+[ext_resource type="AudioStream" uid="uid://c80mk46dk13lp" path="res://assets/sounds/global/title_screen_jingle.wav" id="2_4u500"]
+
+[node name="Title Screen" type="Node2D"]
+script = ExtResource("1_bxqb0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(192, 108)
+texture = ExtResource("1_pffxj")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_4u500")
+volume_db = -6.0
+autoplay = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

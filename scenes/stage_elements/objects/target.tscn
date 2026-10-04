@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dn6b3r616hute"]
+
+[ext_resource type="Script" path="res://scripts/obstacles/target.gd" id="1_0ket4"]
+[ext_resource type="Texture2D" uid="uid://bi345bmeu4n1x" path="res://assets/sprites/tileset.png" id="1_pbnip"]
+[ext_resource type="AudioStream" uid="uid://dm6saoed14pym" path="res://assets/sounds/sound_effects/target_entered.wav" id="3_dml7m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v757q"]
+size = Vector2(6, 6)
+
+[node name="Target" type="Area2D"]
+z_index = 2
+monitorable = false
+script = ExtResource("1_0ket4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_pbnip")
+hframes = 10
+vframes = 12
+frame = 45
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_v757q")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_dml7m")
+volume_db = -6.0
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

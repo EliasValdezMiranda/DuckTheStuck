@@ -1,0 +1,73 @@
+[gd_scene load_steps=11 format=3 uid="uid://lyslkv3atj7r"]
+
+[ext_resource type="Texture2D" uid="uid://bi345bmeu4n1x" path="res://assets/sprites/tileset.png" id="1_4y1vf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nyigg"]
+atlas = ExtResource("1_4y1vf")
+region = Rect2(96, 112, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwsvy"]
+atlas = ExtResource("1_4y1vf")
+region = Rect2(112, 112, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uqb6k"]
+atlas = ExtResource("1_4y1vf")
+region = Rect2(128, 112, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g7qoe"]
+atlas = ExtResource("1_4y1vf")
+region = Rect2(144, 112, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b431p"]
+atlas = ExtResource("1_4y1vf")
+region = Rect2(96, 128, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_naea3"]
+atlas = ExtResource("1_4y1vf")
+region = Rect2(112, 128, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2lxf7"]
+atlas = ExtResource("1_4y1vf")
+region = Rect2(128, 128, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dj03w"]
+atlas = ExtResource("1_4y1vf")
+region = Rect2(144, 128, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_74usb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nyigg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kwsvy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uqb6k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7qoe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b431p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_naea3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2lxf7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dj03w")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="Waves" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_74usb")
+autoplay = "default"

@@ -1,0 +1,95 @@
+[gd_scene load_steps=10 format=3 uid="uid://d23fr8sxnv88g"]
+
+[ext_resource type="Script" path="res://scripts/obstacles/rock.gd" id="1_kacvq"]
+[ext_resource type="Texture2D" uid="uid://bi345bmeu4n1x" path="res://assets/sprites/tileset.png" id="2_hc3er"]
+[ext_resource type="AudioStream" uid="uid://drjhtdfpw0y1d" path="res://assets/sounds/sound_effects/rock_pushed.wav" id="3_6wlq5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7w38w"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_88rwf"]
+size = Vector2(2, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_leujm"]
+size = Vector2(8, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uwju5"]
+size = Vector2(8, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5brhg"]
+size = Vector2(1, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o2oeu"]
+size = Vector2(1, 8)
+
+[node name="Rock" type="CharacterBody2D"]
+z_index = 3
+script = ExtResource("1_kacvq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_hc3er")
+hframes = 10
+vframes = 12
+frame = 44
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_7w38w")
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("RectangleShape2D_88rwf")
+
+[node name="Up" type="Area2D" parent="."]
+monitorable = false
+
+[node name="AreaUp" type="CollisionShape2D" parent="Up"]
+position = Vector2(0, -9.5)
+shape = SubResource("RectangleShape2D_leujm")
+
+[node name="RayUp" type="RayCast2D" parent="Up"]
+z_index = 1
+target_position = Vector2(0, -20)
+
+[node name="Down" type="Area2D" parent="."]
+monitorable = false
+
+[node name="AreaDown" type="CollisionShape2D" parent="Down"]
+position = Vector2(0, 9.5)
+shape = SubResource("RectangleShape2D_uwju5")
+
+[node name="RayDown" type="RayCast2D" parent="Down"]
+target_position = Vector2(0, 20)
+
+[node name="Left" type="Area2D" parent="."]
+monitorable = false
+
+[node name="AreaLeft" type="CollisionShape2D" parent="Left"]
+position = Vector2(-9.5, 0)
+shape = SubResource("RectangleShape2D_5brhg")
+
+[node name="RayLeft" type="RayCast2D" parent="Left"]
+target_position = Vector2(-20, 0)
+
+[node name="Right" type="Area2D" parent="."]
+monitorable = false
+
+[node name="AreaRight" type="CollisionShape2D" parent="Right"]
+position = Vector2(9.5, 0)
+shape = SubResource("RectangleShape2D_o2oeu")
+
+[node name="RayRight" type="RayCast2D" parent="Right"]
+target_position = Vector2(20, 0)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_6wlq5")
+volume_db = -12.0
+
+[connection signal="area_entered" from="Up" to="." method="_on_up_area_entered"]
+[connection signal="area_exited" from="Up" to="." method="_on_up_area_exited"]
+[connection signal="area_entered" from="Down" to="." method="_on_down_area_entered"]
+[connection signal="area_exited" from="Down" to="." method="_on_down_area_exited"]
+[connection signal="area_entered" from="Left" to="." method="_on_left_area_entered"]
+[connection signal="area_exited" from="Left" to="." method="_on_left_area_exited"]
+[connection signal="area_entered" from="Right" to="." method="_on_right_area_entered"]
+[connection signal="area_exited" from="Right" to="." method="_on_right_area_exited"]

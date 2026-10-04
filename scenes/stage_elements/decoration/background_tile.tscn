@@ -1,0 +1,131 @@
+[gd_scene load_steps=19 format=3 uid="uid://dw2fns7q6o77d"]
+
+[ext_resource type="Texture2D" uid="uid://bi345bmeu4n1x" path="res://assets/sprites/tileset.png" id="1_wybra"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mj51b"]
+atlas = ExtResource("1_wybra")
+region = Rect2(0, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lxsqa"]
+atlas = ExtResource("1_wybra")
+region = Rect2(16, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r4v32"]
+atlas = ExtResource("1_wybra")
+region = Rect2(32, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m68js"]
+atlas = ExtResource("1_wybra")
+region = Rect2(48, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f2fiq"]
+atlas = ExtResource("1_wybra")
+region = Rect2(64, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3u8n"]
+atlas = ExtResource("1_wybra")
+region = Rect2(80, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hwl41"]
+atlas = ExtResource("1_wybra")
+region = Rect2(96, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18iht"]
+atlas = ExtResource("1_wybra")
+region = Rect2(112, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbree"]
+atlas = ExtResource("1_wybra")
+region = Rect2(128, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_blaoh"]
+atlas = ExtResource("1_wybra")
+region = Rect2(144, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugto6"]
+atlas = ExtResource("1_wybra")
+region = Rect2(0, 176, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5dux"]
+atlas = ExtResource("1_wybra")
+region = Rect2(16, 176, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbddl"]
+atlas = ExtResource("1_wybra")
+region = Rect2(32, 176, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dtv8v"]
+atlas = ExtResource("1_wybra")
+region = Rect2(48, 176, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_egc82"]
+atlas = ExtResource("1_wybra")
+region = Rect2(64, 176, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lrs40"]
+atlas = ExtResource("1_wybra")
+region = Rect2(80, 176, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wo8iq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mj51b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lxsqa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r4v32")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m68js")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f2fiq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s3u8n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hwl41")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18iht")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sbree")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_blaoh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ugto6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q5dux")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rbddl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dtv8v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_egc82")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lrs40")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="Background" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_wo8iq")
+autoplay = "default"
+frame = 15
+frame_progress = 0.697789

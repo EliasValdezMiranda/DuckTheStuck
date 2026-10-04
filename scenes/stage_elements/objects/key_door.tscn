@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://c1s7qi5lk5nch"]
+
+[ext_resource type="Script" path="res://scripts/obstacles/key_door.gd" id="1_30eh2"]
+[ext_resource type="Texture2D" uid="uid://bi345bmeu4n1x" path="res://assets/sprites/tileset.png" id="2_bfa65"]
+[ext_resource type="AudioStream" uid="uid://cipvv50wm5ijf" path="res://assets/sounds/sound_effects/door_open.wav" id="3_3loea"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vu5s1"]
+size = Vector2(16, 16)
+
+[node name="KeyDoor" type="CharacterBody2D"]
+z_index = 2
+script = ExtResource("1_30eh2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_bfa65")
+hframes = 10
+vframes = 12
+frame = 33
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_vu5s1")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_3loea")
+volume_db = -6.0
