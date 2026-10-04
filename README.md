@@ -21,7 +21,7 @@ I decided to make the final project of my CS50X experience a game for some of th
 
 ## 📋 Building
 
-To play the game, it's recommended to play through the browser using [the following link](https://loid14.itch.io/duck-the-stuck), or, otherwise, download the [latest release](https://github.com/EliasValdezMiranda/DuckTheStuck.git/relreases/latest). The project can also be opened using the Godot Engine 4.2.
+To play the game, it's recommended to play through the browser using [the following link](https://loid14.itch.io/duck-the-stuck), or, otherwise, download the [latest release](https://github.com/EliasValdezMiranda/DuckTheStuck/releases/latest). The project can also be opened using the Godot Engine 4.2.
 
 ## 🔍 Project Structure:
 
